@@ -1,0 +1,26 @@
+{
+  "name": "deploy-subgraph-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vkpatva/deploy-subgraph-template.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vkpatva/deploy-subgraph-template/issues"
+  },
+  "homepage": "https://github.com/vkpatva/deploy-subgraph-template#readme",
+  "dependencies": {
+    "@truffle/hdwallet-provider": "^2.1.14",
+    "dotenv": "^16.3.1"
+  }
+}
