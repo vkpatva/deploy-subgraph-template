@@ -21,6 +21,7 @@
   "homepage": "https://github.com/vkpatva/deploy-subgraph-template#readme",
   "dependencies": {
     "@truffle/hdwallet-provider": "^2.1.14",
-    "dotenv": "^16.3.1"
+    "dotenv": "^16.3.1",
+    "web3": "^4.1.1"
   }
 }

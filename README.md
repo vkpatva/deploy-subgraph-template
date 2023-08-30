@@ -63,5 +63,49 @@ This repository provides a template for deploying a smart contract on Polygon Mu
 
 6. Deploy the smart contract to Polygon Mumbai:
    ```bash
-   truffle migrate --network polygon_mumbai
+   truffle migrate --network mumbai
+   ```
+
+7. Transaction Scripts for Smart Contract
+
+   This repository provides scripts to interact with a smart contract on the Ethereum blockchain. The scripts include:
+
+   1. **Deposit Script**: A script to deposit Ether into the smart contract.
+   2. **Withdraw Script**: A script to withdraw Ether from the smart contract.
+   3. **Zero Transaction Script**: A script to send a zero-value transaction to a smart contract, which can be used to cancel a pending transaction.
+
+   **Deposit Script**
+
+   This script allows you to deposit Ether into the smart contract.
+
+   - *Script:* `scripts/deposit.js`
+   - *Command:* `node ./scripts/deposit.js`
+
+   Make sure to edit the script to include the correct contract ABI, contract address, and adjust the deposit amount if needed.
+
+   **Withdraw Script**
+
+   This script allows you to withdraw Ether from the smart contract.
+
+   - *Script:* `scripts/withdraw.js`
+   - *Command:* `node ./scripts/withdraw.js`
+
+   Make sure to edit the script to include the correct contract ABI, contract address, and adjust the withdrawal amount if needed.
+
+   **Zero Transaction Script**
+
+   This script sends a zero-value transaction to the your address, which can be used to cancel a pending transaction.
+
+   - *Script:* `scripts/zeroTx.js`
+   - *Command:* `node ./scripts/zeroTx.js`
+
+   Edit the script to include the correct sender address and adjust any necessary parameters.
+
+   
+   To run the scripts, open a terminal window and navigate to the project directory. Use the corresponding `node` command for the script you want to execute:
+
+   ```bash
+      node ./script/deposit.js
+      node ./script/withdraw.js
+      node ./script/zero_tx.js
    ```
