@@ -7,7 +7,7 @@ This repository provides a template for deploying a smart contract on Polygon Mu
 - Node.js and npm: [Install Node.js](https://nodejs.org/)
 - Truffle: Install Truffle globally using `npm install -g truffle`
 
-## Getting Started
+## Getting Started with Smart Contract
 
 1. Clone the repository:
 
@@ -61,4 +61,7 @@ This repository provides a template for deploying a smart contract on Polygon Mu
    };
 
 
-6. truffle migrate --network polygon_mumbai
+6. Deploy the smart contract to Polygon Mumbai:
+   ```bash
+   truffle migrate --network polygon_mumbai
+   ```
