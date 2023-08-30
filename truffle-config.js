@@ -7,7 +7,7 @@ const alchemyUrl = process.env.ALCHEMY_URL;
 
 module.exports = {
   networks: {
-    polygon: {
+    polygon_mumbai: {
       provider: () =>
         new HDWalletProvider({
           mnemonic: {
@@ -15,7 +15,7 @@ module.exports = {
           },
           providerOrUrl: alchemyUrl,
         }),
-      network_id: 80001, // Polygon mainnet network id
+      network_id: 80001, // Polygon mumbai network id
       gasPrice: 20000000000, // Adjust the gas price as needed
       gas: 8000000, // Gas limit
       confirmations: 2, // Number of confirmations to wait before deployment is considered successful
