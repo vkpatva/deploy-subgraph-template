@@ -20,8 +20,8 @@ const executeTransaction = async () => {
   const accounts = provider.getAddresses();
   const etherBankContract = new web3.eth.Contract(contractAbi, contractAddress);
 
-  // Prepare the data for the deposit function call
   try {
+  // Prepare the data for the deposit function call
     const depositData = etherBankContract.methods.deposit().encodeABI();
     for (let i = 0; i < 5; i++) {
       const txObj = {
