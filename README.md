@@ -109,3 +109,59 @@ This repository provides a template for deploying a smart contract on Polygon Mu
       node ./script/withdraw.js
       node ./script/zero_tx.js
    ```
+
+
+## Deploying a Subgraph for Ethereum Contracts using The Graph
+
+This guide outlines the steps to deploy a subgraph for Ethereum contracts using The Graph. A subgraph allows you to index and query data from your smart contracts, making it easy to create APIs and visualizations for your blockchain data.
+
+### Steps
+
+1. **Connect to The Graph Explorer:**
+   - Go to [The Graph Explorer](https://thegraph.com/explorer).
+   - Connect your Metamask wallet and ensure you have test tokens.
+
+2. **Create Subgraph on Subgraph Studio:**
+   - Navigate to Subgraph Studio and click "Create Subgraph".
+   - Enter the required details. (You can also use existing contracts)
+   - Note: You need to pay to publish subgraphs, but you can keep them private during creation.
+
+3. **Install Graph CLI and Initialize Subgraph:**
+   - Install the Graph CLI package: `npm install -g @graphprotocol/graph-cli`
+   - Initialize the subgraph for the Polygon contract:
+     ```
+     graph init --studio polygoncontract
+     ```
+   - Select the protocol (Ethereum) and the chain (Polygon).
+
+4. **Provide Contract Address:**
+   - Provide the contract address of the deployed contract for subgraph creation.
+
+5. **Schema Definition:**
+   - Define the schema in `schema.graphql` to specify accessible events and properties.
+   - The schema should match what you want to query via the API.
+
+6. **Authorization and Deployment:**
+   - Authorize and deploy the subgraph using your key:
+     ```
+     graph auth https://api.thegraph.com/deploy/ <ACCESS_TOKEN>
+     graph deploy --node https://api.thegraph.com/deploy/ --ipfs https://api.thegraph.com/ipfs/ <SUBGRAPH_NAME>
+     ```
+   - For detailed steps, follow this [video tutorial](https://thegraph.com/docs/en/deploying/subgraph-studio/).
+
+7. **Upload to IPFS:**
+   - Your subgraph will be uploaded to IPFS and shown on your The Graph dashboard.
+   - The subgraph can be queried using the API generated.
+
+### Additional Notes
+
+- **Start Block:** You can specify a start block to begin indexing events. It's not necessary to index events before the contract's deployment.
+- **subgraph.yaml:** This file contains information about the created subgraph.
+- **schema.graphql:** Defines the events and properties accessible through the API. The schema matches the playground schema.
+- **Build Directory:** The contents of the build directory are the ones that will be uploaded to IPFS.
+
+**Note:** Always exercise caution when dealing with contracts and data. Make sure to test thoroughly with test tokens before using real funds or data.
+
+For more detailed information, refer to The Graph documentation and resources:
+- [Deploying a Subgraph to Studio](https://thegraph.com/docs/en/deploying/deploying-a-subgraph-to-studio/)
+- [The Graph Documentation](https://thegraph.com/docs/en/)
