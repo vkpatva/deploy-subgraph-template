@@ -111,9 +111,9 @@ This repository provides a template for deploying a smart contract on Polygon Mu
    ```
 
 
-## Deploying a Subgraph for Ethereum Contracts using The Graph
+## Deploying a Subgraph for Contracts using The Graph
 
-This guide outlines the steps to deploy a subgraph for Ethereum contracts using The Graph. A subgraph allows you to index and query data from your smart contracts, making it easy to create APIs and visualizations for your blockchain data.
+This guide outlines the steps to deploy a subgraph for contracts using The Graph. A subgraph allows you to index and query data from your smart contracts, making it easy to create APIs and visualizations for your blockchain data.
 
 ### Steps
 
